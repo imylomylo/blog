@@ -12,6 +12,7 @@ categories:
   - cryptocurrency
   - komodo
   - smart-contracts
+tags: [featured]
 image: wp-content/uploads/2019/02/alice-conditional-payment-met-bob-receives.png
 ---
 It goes without saying that the loss of a loved one is a very traumatic time.  May the family of the deceased find the time to embrace the grief and be allowed to heal without too much outside interference despite the circumstances that surround the case of the QuadrigaCX owner passing without leaving access to cold wallet keys in the form of a cryptocurrency will.
