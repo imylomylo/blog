@@ -14,6 +14,7 @@ image: /wp-content/uploads/2018/08/800px-Set_of_Poker_Chips_in_Case.jpg
 categories:
   - komodo
   - kvm
+tags: [featured]
 ---
 The new komodo features include [testing Crypto Conditions (UTXO smart contracts)](https://blog.komodoplatform.com/pre-alpha-komodo-utxo-smart-contracts-notes-7c5e8f49206), independent blockchain customization, [a community news site and integrated discourse forum](https://www.reddit.com/r/komodoplatform/comments/87l636/a_new_komodo_news_site_what_do_you_want_to_see/?st=jld426a2&sh=430bc10a), and finally the one that pushed me over the edge to order a new dedicated server&#8230;.erc20 bridging to komodo.  Between trying to finish a [komodo rpc lib in javascript](https://github.com/imylomylo/komodo-rpc-lib) (first, then maybe go and python) and picking up more docker related workflows to emulate what it would be like for a new dev to use komodo in the quickest amount of time, I feel comfortable having a few more machines &#8211; and this is where a KVM routed network gives me full advantage of having 2-10 underutilised virtual machines per dedicated server.  From these virtual machines, running a few docker containers in each virtual machine makes for pretty effective utilisation, although virtualization is not my expertise, a KVM routed network helps me keep tasks and goals fairly independent from each other.
 
