@@ -10,6 +10,7 @@ categories:
   - blockchain
   - komodo
 image: wp-content/uploads/2018/12/4.-notarizing-onto-assetchains-768x721.png
+tags: [featured]
 ---
 Lately I have seen more questions asked on what is Komodo compared to Ethereum?  Ethereum architecture problems are well known currently and the dev team is working on it &#8211; or has been thinking/working on it for some time.  This [tweet storm about ethereum architecture](https://twitter.com/TuurDemeester/status/1078682801954799617) problems and more (economic changes etc.) is epic and brutally honest in my opinion.  Has some good references to back up the argument.
 
