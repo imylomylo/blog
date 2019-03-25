@@ -11,6 +11,7 @@ categories:
   - bitcoin
   - blockchain
   - komodo
+tags: [featured]
 ---
 This short post is about energy efficient bitcoin miners seeking renewable energy as an economic solution. Komodo dPoW is explained briefly, which provides blockchain security and an entry into _secure_ & _scalable_ sharding solutions not available to existing blockchain sharding consensus protocols.
 
