@@ -30,6 +30,6 @@ There are many guides for things like [Saas startups](https://github.com/proplat
 
 This year will see more changes in the form of standardisation, government regulations and even government issued currencies.  I have already covered a few items here about wallets, online communities and some other basic stuff about architecture &#8211; but it&#8217;s more for my own needs rather than for others to read.
 
-Hopefully, like I mention in the [about page](https://i.mylomylo.com/about/), this information is useful to someone and that they take this power (because knowledge is power) and put it to good use!
+Hopefully, like I mention in the [about page](https://i.mylomylo.com/about), this information is useful to someone and that they take this power (because knowledge is power) and put it to good use!
 
 This is not to be taken as financial advice &#8211; but I would seriously recommend looking at ways to transform your business into a smart business that is agile and moves with the changes.  For that, please refer to my [business website](https://businessapps.com.au) for consulting in Australia and abroad.
