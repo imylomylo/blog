@@ -18,6 +18,7 @@ categories:
   - komodo
   - ripple xrp
   - stellar xlm
+tags: [featured]
 ---
 What is Crypto?  It is not so simple to answer &#8211; it is like asking, &#8220;what is life?&#8221; or &#8220;what is fun?&#8221; or &#8220;what is scary?&#8221; &#8211; it is different things to different people.  There are facts, lies, fun, business and dreams.  Crypto spans finance, ecology, business, personal, law, numbers, images, text, messaging &#8211; there are no limits to the next version of networks.  The smart-grid will be powered by crypto.
 
