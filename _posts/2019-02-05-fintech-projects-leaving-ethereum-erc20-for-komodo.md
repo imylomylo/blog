@@ -11,6 +11,7 @@ categories:
   - cryptocurrency
   - komodo
 image: wp-content/uploads/2019/01/projects-leaving-ethereum-questions.png
+tags: [featured]
 ---
 The morning I drafted this post, I had a notification that someone clapped for a Medium _comment_ I left about projects leaving ethereum and migrating to another system in the time that Ethereum works on getting 2.0 multi-sharding system working.
 
