@@ -21,8 +21,18 @@ Looking at the proposal through their whitepaper, there are three sample apps fo
 
 Additionally, the recently created project [Komodore64 gaming platform has announced a partnership with RedFOX](https://twitter.com/komodoregames/status/1114137004047044608).
 
-## How can these platforms be built using Komodo?
-Whether the platforms created in the future raise their own funds or create their own currencies or tokens, the initial blockchain creation for any project RedFOX Labs undertakes is possible with Komodo's Blockchain Starter Kit (BSK).  This is provided in both technical form (DIY Blockchain) and in service form - through service providers found at the Komodo BSK page.   The Komodo team is also creating a SaaS blockchain generator due for launch Q2 2019.  A custom blockchain is generated with it's own characteristics including rewards, supply, consensus, blocktime and more.  So once these blockchains are created, how do you build on top of them?
+## Why does RedFOX success benefit everyone?
+Komodo is an open ecosystem.  RedFOX is the first incubation project attempting to take Komodo technology mainstream.  Komodo's technology offering is vast:
+* Multi-currency Wallet
+* 3rd Generation Atomic Swap DEX Network
+* Custom Consensus Framework
+* Blockchain Starter Kit
+* Blockchain Security Service
+
+The custom consensus framework recently enabled true [decentralized oracles for decentralized price feeds]().
+
+## How can these platforms be built by RedFOX Labs?
+Whether the platforms created in the future raise their own funds or create their own currencies or tokens, the initial blockchain creation for any project RedFOX Labs undertakes is possible with Komodo's [Blockchain Starter Kit](https://komodoplatform.com/blockchain-starter-kit/) (BSK).  This is provided in both technical form (DIY Blockchain) and in service form - through service providers found at the Komodo BSK page.   The Komodo team is also creating a [SaaS blockchain generator](https://decryptmedia.com/5263/amazon-komodo-service-blockchain) due for launch Q2 2019.  A custom blockchain is generated with it's own characteristics including rewards, supply, consensus, blocktime and more.  So once these blockchains are created, how do you build on top of them?
 
 ### Payment Systems
 * Cryptocurrencies & Stablecoins
@@ -40,16 +50,14 @@ There are already a couple of blockchain integrated streaming media services - n
 Given my testing was for live streaming, the Tech Tuesday article was for an existing data file - the likely solution for a VIETFLIX type of service.
 
 ### Photo Media Services
-There is more than one way to architect a photo media service.  Whether it is with a URL (web or IPFS) or whether it is stored on the blockchain, like using an oracle for [industry certifications storage](https://komodoplatform.com/tt2019-5-peer-to-peer-orderbooks-first-atomic-swap/) there are many ways to develop it.  More importantly, evolving the service as product life-cycles change or as the technology adoption grows - Komodo can adapt via it's multi-chain architecture and the ability to [migrate chain data](https://komodoplatform.com/tt2019-3-digital-asset-tokenization-pool-mining-time-lock-rewards/).  Interestingly, if decentralized control of your own data leads to payments to the content creator via streaming payments or micro-transactions via [on-chain instant channel payments](https://komodoplatform.com/tech-tuesday-update-2/).
+RedFOX Labs, by using Komodo can mix-and-match it's technology offerings to cater for business requirements.  It also [scales because of the multi-chain architecture](https://komodoplatform.com/komodo-platforms-new-scalability-tech/).
 
-Komodo can mix-and-match it's technology offerings to cater for business requirements.  It also [scales because of the multi-chain architecture](https://komodoplatform.com/komodo-platforms-new-scalability-tech/).
+The first iteration of a blockchain based photo media service may start small - it may only serve the thumbnails of the streaming service.  
 
-### Komodore64 Gaming Platform Partnership
+There is more than one way to architect a photo media service.  Whether it is with a URL (web or IPFS) or whether it is stored on the blockchain, like using an oracle for [industry certifications storage](https://komodoplatform.com/tt2019-5-peer-to-peer-orderbooks-first-atomic-swap/) there are many ways to develop it - and scale it.  This capability alone is likely to be an industry solution to fake certifications.
 
-## Why does RedFOX success benefit everyone?
-Komodo is an open ecosystem.  RedFOX is the first incubation project attempting to take Komodo technology mainstream.  Komodo's technology offering is vast.
-* Multi-currency Wallet
-* 3rd Generation Atomic Swap DEX Network
-* Custom Consensus Framework
-* Blockchain Starter Kit
-* Blockchain Security Service
+More importantly, evolving the service as product lifecycles change or as the technology adoption grows - Komodo can adapt via it's multi-chain architecture and the ability to [migrate chain data](https://komodoplatform.com/tt2019-3-digital-asset-tokenization-pool-mining-time-lock-rewards/).  Interestingly, if decentralized control of your own data leads to payments to the content creator via streaming payments or micro-transactions via [on-chain instant channel payments](https://komodoplatform.com/tech-tuesday-update-2/).
+
+
+## Komodore64 Gaming Platform Partnership
+The RedFOX Labs whitepaper does not mention any gaming products.   This announcement came after whitepaper publication.  I have been a keen proponent of gaming blockchain solutions.  The platform being built by Komdore Games is to enable indie game developers to create blockchain games fast.  An SDK layer is already in early testing for Unity3D and as per the [twitter feed of Komodore Games](https://twitter.com/komodoregames), Unreal Engine too!
