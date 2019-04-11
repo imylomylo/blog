@@ -42,7 +42,7 @@ The crypto & stablecoin can be created with a new blockchain above.  In the curr
 
 There is a new wallet in closed-alpha testing at the moment written from scratch and developed mobile-first.  It's a [crypto-superwallet actively tested](https://twitter.com/0xca333/status/1113045156826136576).  Multi-coin with a DEX baked in.  RedFOX also partners with Zaddex, the hybrid DEX/CEX exchange.  The RedFOX team has not disclosed the development roadmap of their payment system - I am only highlighting what Komodo technology is available to create a payment platform that accepts multi-currency.
 
-Komodo has provided a whitelabel multi-currency wallet since 2017.  The often criticized Agama wallet with it's "clunky" look and feel can be made beautiful.
+Komodo has provided a whitelabel multi-currency wallet since 2017.  The often criticized Agama wallet with it's "clunky" look and feel can be [made beautiful](https://hybriddex.com/2019/04/chameleon-pay-multi-coin-wallet/).
 
 ### Streaming Services
 There are already a couple of blockchain integrated streaming media services - namely DTube amongst others.  In Komodo's Tech Tuesday #6 from 2018, I wrote about the [blockchain streamer proof of concept](https://komodoplatform.com/tech-tuesday-update-6/).  What hasn't been recorded anywhere unfortunately is the proof of concept I quickly made for capturing webcam data using the browser's getUserMedia capabilities.  [Capturing video chunks around this line of code](https://github.com/imylomylo/samples/blob/gh-pages/src/content/getusermedia/record/js/main.js#L76) and appending to the local array of chunks, was instead fired off to the local running streaming transaction instance.
