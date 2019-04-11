@@ -9,6 +9,7 @@ categories:
   - komodo
   - cryptocurrency
   - redfox
+image: /assets/images/everybody-wins.jpg
 tags: [featured]
 ---
 RedFOX Labs is a start up that creates start ups.  An incubator.  They are seeking funding to bootstrap this incubation process.   The funding drive comes from an IEO tomorrow - April 12.  The focus for this article is written from a technical point of view.  Not a financial point of view.  The technical highlights of Komodo are well known to me, because I have written approximately 30 of the Komodo Tech Tuesday articles to date.  RedFOX CEO Ben Fairbank, colloquially known by his online handle bitcoinbenny, shot me a question for technical resources recently, which I will include in this article.  It may not be clear to people where Komodo's technology fits in the creation of new startups, products and services, so let me try to make things more evident.
