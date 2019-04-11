@@ -1,6 +1,6 @@
 ---
 id: 441
-title: 'RedFOX Labs IEO: why using blockchain components of Komodo to accelerating adoption is a win for everyone'
+title: 'RedFOX Labs IEO: why using blockchain components of Komodo to accelerate adoption is a win for everyone'
 date: 2019-04-11
 author: Mylo Mylo
 layout: post
@@ -29,7 +29,7 @@ Komodo is an open ecosystem.  RedFOX is the first incubation project attempting 
 * Blockchain Starter Kit
 * Blockchain Security Service
 
-The custom consensus framework recently enabled true [decentralized oracles for decentralized price feeds]().
+The custom consensus framework recently enabled true [decentralized oracles for decentralized price feeds](https://komodoplatform.com/tt2019-14-oracles-prediction-market-feeds/).
 
 ## How can these platforms be built by RedFOX Labs?
 Whether the platforms created in the future raise their own funds or create their own currencies or tokens, the initial blockchain creation for any project RedFOX Labs undertakes is possible with Komodo's [Blockchain Starter Kit](https://komodoplatform.com/blockchain-starter-kit/) (BSK).  This is provided in both technical form (DIY Blockchain) and in service form - through service providers found at the Komodo BSK page.   The Komodo team is also creating a [SaaS blockchain generator](https://decryptmedia.com/5263/amazon-komodo-service-blockchain) due for launch Q2 2019.  A custom blockchain is generated with it's own characteristics including rewards, supply, consensus, blocktime and more.  So once these blockchains are created, how do you build on top of them?
