@@ -2,7 +2,7 @@
 id: 441
 title: 'RedFOX Labs IEO: why using blockchain components of Komodo to accelerate adoption is a win for everyone'
 date: 2019-04-11
-author: Mylo Mylo
+author: mylo
 layout: post
 categories:
   - blockchain
