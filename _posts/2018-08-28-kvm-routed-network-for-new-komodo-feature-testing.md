@@ -33,27 +33,29 @@ This is how I came across [some dude&#8217;s website about KVM configurations](h
   1. ssh to host
   2. become root and create a bridge interface for your public addresses to be advertised on the host and then routed to the guest (if in doubt, refer to Jamie&#8217;s website for clearer instructions)
   3. download your iso (e.g. ubuntu-16.04-5)
-  4. Create the virtual machine and start it with VNC <pre class="p1"><span class="s1">virt-install --name erc20bridge --ram 4096 --disk path=/var/lib/libvirt/images/erc20bridge.img,bus=virtio,size=300 --cdrom /opt/ubuntu-16.04.5-server-amd64.iso --network network=default,model=virtio --graphics vnc,listen=0.0.0.0,password=protectme --vcpus 4 --noautoconsole -v</span></pre>
+  4. Create the virtual machine and start it with VNC 
+```
+  virt-install --name erc20bridge --ram 4096 --disk path=/var/lib/libvirt/images/erc20bridge.img,bus=virtio,size=300 --cdrom /opt/ubuntu-16.04.5-server-amd64.iso --network network=default,model=virtio --graphics vnc,listen=0.0.0.0,password=protectme --vcpus 4 --noautoconsole -v
+```
 
   5. log out OR ssh tunnel your vnc connection 
-    <pre>ssh -L5900:localhost:5900 user@kvmhost</pre>
-
+```
+ssh -L5900:localhost:5900 user@kvmhost
+```
   6. Finish the install VNC as if you were in front of the machine  
 <img class="aligncenter size-full wp-image-356" src="https://i.mylomylo.com/wp-content/uploads/2018/08/kvm-vnc-install-ubuntu.png" alt="vnc install ubuntu as kvm guest" width="912" height="734" srcset="https://i.mylomylo.com/wp-content/uploads/2018/08/kvm-vnc-install-ubuntu.png 912w, https://i.mylomylo.com/wp-content/uploads/2018/08/kvm-vnc-install-ubuntu-300x241.png 300w, https://i.mylomylo.com/wp-content/uploads/2018/08/kvm-vnc-install-ubuntu-768x618.png 768w" sizes="(max-width: 912px) 100vw, 912px" /> 
-  7. <p class="p1">
-      <span class="s1"><span class="Apple-converted-space">    </span></span>After it shuts down, remove the vnc config from your guest configuration.  Firstly dump the definition of your guest, modify the XML definition, then redefine it with the host.  (keep an original file in case of errors).
-    </p>
+  7. After it shuts down, remove the vnc config from your guest configuration.  Firstly dump the definition of your guest, modify the XML definition, then redefine it with the host.  (keep an original file in case of errors).
    
 ```
-    virsh dumpxml erc20bridge &gt; erc20bridge.orig
+virsh dumpxml erc20bridge &gt; erc20bridge.orig
 cp erc20bridge.orig erc20bridge
 vi erc20bridge
 ```
-    remove
+optionally remove
 ```  
-&lt;graphics type='vnc' port='-1' autoport='yes' listen='0.0.0.0'&gt;
-&lt;listen type='address' address='0.0.0.0'/&gt;
-&lt;/graphics&gt;
+<graphics type='vnc' port='-1' autoport='yes' listen='0.0.0.0'>
+<listen type='address' address='0.0.0.0'/>
+</graphics>
 ```
   8. Whilst we are still editing the machine definition, let&#8217;s define a new network interface which will have the public ip for our routed network. 
 ```
