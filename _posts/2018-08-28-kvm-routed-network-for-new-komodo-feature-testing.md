@@ -43,42 +43,41 @@ This is how I came across [some dude&#8217;s website about KVM configurations](h
   7. <p class="p1">
       <span class="s1"><span class="Apple-converted-space">    </span></span>After it shuts down, remove the vnc config from your guest configuration.  Firstly dump the definition of your guest, modify the XML definition, then redefine it with the host.  (keep an original file in case of errors).
     </p>
-    
-    <pre>virsh dumpxml erc20bridge &gt; erc20bridge.orig
+   
+```
+    virsh dumpxml erc20bridge &gt; erc20bridge.orig
 cp erc20bridge.orig erc20bridge
-vi erc20bridge</pre>
-    
+vi erc20bridge
+```
     remove
-    
-    <pre class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;graphics type='vnc' port='-1' autoport='yes' listen='0.0.0.0'&gt;</span>
-<span class="s1"><span class="Apple-converted-space">      </span>&lt;listen type='address' address='0.0.0.0'/&gt;</span>
-<span class="s1"><span class="Apple-converted-space">    </span>&lt;/graphics&gt;</span></pre>
-
-  8. Whilst we are still editing the machine definition, let&#8217;s define a new network interface which will have the public ip for our routed network. <pre class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;interface type='network'&gt;</span>
-<span class="s1"><span class="Apple-converted-space">      </span>&lt;mac address='This has a mac address, and this type/network xml element already exists'/&gt;</span>
-<span class="s1"><span class="Apple-converted-space">      </span>&lt;source network='default'/&gt;</span>
-<span class="s1"><span class="Apple-converted-space">      </span>&lt;model type='virtio'/&gt;</span>
-<span class="s1"><span class="Apple-converted-space">      </span>&lt;address type='pci' domain='0x0000' bus='0x00' slot='0x03' function='0x0'/&gt;</span>
-<span class="s1"><span class="Apple-converted-space">    </span>&lt;/interface&gt;</span>
-<span class="s1"><span class="Apple-converted-space">    </span>&lt;interface type='bridge'&gt;</span>
-<span class="s1"><span class="Apple-converted-space">      </span>&lt;source bridge='virbr10'/&gt;</span>
-<span class="s1"><span class="Apple-converted-space">      </span>&lt;target dev='vnetXXX'/&gt;</span>
-<span class="s1"><span class="Apple-converted-space">      </span>&lt;model type='virtio' /&gt;</span>
-<span class="s1"><span class="Apple-converted-space">    </span>&lt;/interface&gt;</span></pre>
-    
+```  
+&lt;graphics type='vnc' port='-1' autoport='yes' listen='0.0.0.0'&gt;
+&lt;listen type='address' address='0.0.0.0'/&gt;
+&lt;/graphics&gt;
+```
+  8. Whilst we are still editing the machine definition, let&#8217;s define a new network interface which will have the public ip for our routed network. 
+```
+&lt;interface type='network'&gt;
+&lt;mac address='This has a mac address, and this type/network xml element already exists'/&gt;
+&lt;source network='default'/&gt;
+&lt;model type='virtio'/&gt;
+&lt;address type='pci' domain='0x0000' bus='0x00' slot='0x03' function='0x0'/&gt;
+&lt;/interface&gt;
+&lt;interface type='bridge'&gt;
+&lt;source bridge='virbr10'/&gt;
+&lt;target dev='vnetXXX'/&gt;
+&lt;model type='virtio' /&gt;
+>&lt;/interface&gt;
+``` 
     vnetXXX on my systems is an odd number.  e.g. vnet1, vnet3, vnet5 because each guest has two interfaces.  The first interface is internal KVM NAT network, the second is the one used for the KVM Routed Network.</li> 
     
       * You then want to boot up the guest and make sure the NAT network is ok and that if you run ifconfig on the host there are no conflicts and both guest network cards are shown.  vnetX and vnetX+1
-      * ssh to the guest using it&#8217;s internal address, something like ssh mylo@192.168.122.XXX will get you in.  And then make a definition for the second network card in /etc/network/interfaces <pre class="p1"><span class="s1"># The secondary network interface</span>
-<span class="s1">auto ens7</span>
-<span class="s1">iface ens7 inet static</span>
-<span class="s1"><span class="Apple-converted-space">  </span>address &lt;EXTERNAL IP&gt;</span>
-<span class="s1"><span class="Apple-converted-space">  </span>netmask 255.255.255.224</span>
-<span class="s1"><span class="Apple-converted-space">  </span>gateway &lt;HOST EXTERNAL IP&gt;</span>
-<span class="s1"><span class="Apple-converted-space">  </span>pointtopoint &lt;HOST EXTERNAL IP&gt;
+      * ssh to the guest using it&#8217;s internal address, something like ssh mylo@192.168.122.XXX will get you in.  And then make a definition for the second network card in /etc/network/interfaces 
+```
+      # The secondary network interface
 
-</span></pre>
     
+```
       *  Reboot the guest.
       * On the host, configure the firewall (iptables) and routing (ip r) <pre class="p1"><span class="s1">root</span><span class="s2">@</span><span class="s3">host </span><span class="s2">~ </span><span class="s4"># </span><span class="s5">iptables -A FORWARD -d GUEST_EXTERN_IP/32 -o virbr10 -j ACCEPT</span>
 <span class="s1">root</span><span class="s2">@host</span><span class="s3"> </span><span class="s2">~ </span><span class="s4"># </span><span class="s5">iptables -A FORWARD -s GUEST_EXTERN_IP/32 -i virbr10 -j ACCEPT</span>
