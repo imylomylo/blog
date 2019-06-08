@@ -57,17 +57,30 @@ vi erc20bridge
 ```
   8. Whilst we are still editing the machine definition, let&#8217;s define a new network interface which will have the public ip for our routed network. 
 ```
-&lt;interface type='network'&gt;
-&lt;mac address='This has a mac address, and this type/network xml element already exists'/&gt;
-&lt;source network='default'/&gt;
-&lt;model type='virtio'/&gt;
-&lt;address type='pci' domain='0x0000' bus='0x00' slot='0x03' function='0x0'/&gt;
-&lt;/interface&gt;
-&lt;interface type='bridge'&gt;
-&lt;source bridge='virbr10'/&gt;
-&lt;target dev='vnetXXX'/&gt;
-&lt;model type='virtio' /&gt;
->&lt;/interface&gt;
+
+From 1 card:
+    <interface type='network'>
+      <mac address='52:54:00:d9:68:1d'/>
+      <source network='default'/>
+      <model type='virtio'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x03' function='0x0'/>
+    </interface>
+
+To 2 cards (slot 3 & slot 7):
+    <interface type='network'>
+      <mac address='52:54:00:d9:68:1d'/>
+      <source network='default'/>
+      <model type='virtio'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x03' function='0x0'/>
+    </interface>
+    <interface type='bridge'>
+      <mac address='52:54:00:55:f6:89'/>
+      <source bridge='virbr10'/>
+      <model type='virtio'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x07' function='0x0'/>
+    </interface>
+
+
 ``` 
     vnetXXX on my systems is an odd number.  e.g. vnet1, vnet3, vnet5 because each guest has two interfaces.  The first interface is internal KVM NAT network, the second is the one used for the KVM Routed Network.</li> 
     
